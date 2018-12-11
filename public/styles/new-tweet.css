@@ -1,0 +1,27 @@
+.new-tweet h2 {
+  border-bottom: 1px solid black;
+  text-align: left;
+}
+
+
+.new-tweet textarea {
+  width: 100%;
+  border-radius: 4px;
+}
+
+
+.new-tweet input {
+  float: left;
+}
+
+.new-tweet span {
+  float: right;
+}
+
+.container section {
+  background-color: #80808014;
+  height: 175px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 10px 10px;
+}
