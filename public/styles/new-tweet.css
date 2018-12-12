@@ -18,10 +18,123 @@
   float: right;
 }
 
-.container section {
+.container .new-tweet {
   background-color: #80808014;
   height: 175px;
   border: 1px solid gray;
   border-radius: 4px;
   padding: 10px 10px;
 }
+
+
+/*indiv-tweet*/
+
+.indiv-tweets h2 span {
+  font-size: 15px;
+}
+
+.container .indiv-tweets {
+  background-color: white;
+  height: 175px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  margin: 5px;
+}
+
+.indiv-tweets textarea {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.indiv-tweets input {
+  float: left;
+}
+
+.indiv-tweets .name {
+  text-align: left;
+  font-size: 25px;
+  font: bold;
+  vertical-align: 50%;
+}
+
+.indiv-tweets .handle {
+  float: right;
+  padding-top: 10px;
+  padding-right: 5px;
+}
+
+.indiv-tweets header {
+  padding: 5px 5px;
+  background-color: #9e9e9e7a;
+}
+
+.indiv-tweets .image {
+  border-radius: 3px;
+}
+
+.indiv-tweets  {
+ text-align: left;
+}
+
+.indiv-tweets footer {
+  border-top: 1px solid #80808014;
+  padding-left: 5px;
+}
+
+.indiv-tweets div {
+  padding-left: 5px;
+  height: 70px;
+}
+
+article:hover .animation {
+  display: block;
+}
+
+article.indiv-tweets:hover {
+  border: 2px solid black;
+}
+
+footer .animation {
+  display: none;
+  float: right;
+  color: green;
+  padding-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
