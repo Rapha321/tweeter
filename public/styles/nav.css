@@ -22,3 +22,33 @@
           line-height: 2;
 
 }
+
+#nav-bar .large-button {
+  float: right;
+  border-radius: 4px;
+  width: auto;
+  height: 80%;
+  padding: 20px 20px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-right: 20px;
+  font-size: 20px;
+  background-color: #daf9f4;
+  border: 1.5px solid black;
+}
+
+#nav-bar .large-button:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+
+.errorBlank {
+  display: none;
+  color: red;
+}
+
+.error140 {
+  display: none;
+  color: red;
+}

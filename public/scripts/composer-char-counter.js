@@ -1,11 +1,16 @@
 $(document).ready(function() {
-  $('.new-tweet textarea').keyup(function(event) {
+  $('.new-tweet textArea').keyup(function(event) {
+    $('.errorBlank').css('display', 'none');
+
     var value = $(this).val().length;
     if ((140 - value) < 0) {
       $('.new-tweet .counter').text(140 - value).css("color", "red");
+      $('.error140').css('display', 'block');
+
     }
     else {
       $('.new-tweet .counter').text(140 - value).css("color", "black");
+      $('.error140').css('display', 'none');
     }
   });
 
@@ -21,11 +26,13 @@ $(document).ready(function() {
       // $('article').on('mouseleave', function() {
       //   $(this).css('border', '1px solid gray');
       // });
-    });
+    // });
 
 
 
 });
+
+
 
 
 
