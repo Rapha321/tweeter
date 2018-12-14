@@ -87,8 +87,9 @@ $(document).ready(function() {
     $( '.new-tweet' ).slideToggle('fast');
   });
 
-  // $('.textArea').document.text.focus();
-
+$('.large-button').on('click', function() {
+  $('.textArea').focus()
+})
 
 });
 
