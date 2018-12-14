@@ -39,13 +39,13 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form class="submitTweet" name="submitTweet" action="/tweets/" method="POST">
-          <textarea class="textArea" name="text" placeholder="What are you humming about?"></textarea>
+          <textarea autofocus="autofocus" class="textArea" name="text" placeholder="What are you humming about?"></textarea>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
         <div class="errorMessages">
-          <p class="errorBlank"> <i class="fa fa-times"></i> Error: Tweet cannot be blank!</p>
-          <p class="error140"> <i class="fa fa-times"></i> Error: Length of tweet cannot be greater than 140 characters!!</p>
+          <p class="errorBlank"> <i class="fa fa-times"></i> Tweet cannot be blank!</p>
+          <p class="error140"> <i class="fa fa-times"></i> Tweet cannot be greater than 140 characters!!</p>
         </div>
       </section>
 

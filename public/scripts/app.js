@@ -121,7 +121,7 @@ function createTweetElement(obj) {
       </div>
 
       <footer>
-        <span>${escape(obj.created_at)}</span>
+        <span>${moment(obj.created_at).fromNow()}</span>
         <div class="animation">
           <i class="fa fa-flag" aria-hidden="true"></i>
           <i class="fa fa-retweet" aria-hidden="true"></i>
@@ -169,6 +169,8 @@ $(document).ready(function() {
         })
         .done(function() {
           loadTweets();
+          $('.textArea').val("");
+          $('.counter').text("140");
         })
       }
   });
