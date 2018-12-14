@@ -10,7 +10,6 @@ const MongoClient   = require("mongodb").MongoClient;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-// const db = require("./lib/in-memory-db");
 
 // The in-memory database of tweets. It's a basic object with an array in it.
 // const db = require("./lib/in-memory-db");
@@ -23,8 +22,6 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
     throw err;
   }
   console.log(`Connected to mongodb: ${MONGODB_URI}`);
-
- // We have a connection to the "tweeter" db, starting here.
 
 
 // The `data-helpers` module provides an interface to the database of tweets.
@@ -40,10 +37,10 @@ const DataHelpers = require("./lib/data-helpers.js")(db);
 // so it can define routes that use it to interact with the data layer.
 const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 
-
+// Mount the tweets routes at the "/tweets" path prefix:
 app.use("/tweets", tweetsRoutes);
 });
-// Mount the tweets routes at the "/tweets" path prefix:
+
 
 
 app.listen(PORT, () => {

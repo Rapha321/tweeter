@@ -40,35 +40,38 @@ function createTweetElement(obj) {
   return $tweet;
 }
 
-// this will make sure that
+// to make sure that the DOM of the page is ready to manipulate.
 $(document).ready(function() {
+  // rendering tweets page
   let loadTweets = function() {
     $.ajax("/tweets", {method: 'GET'})
     .then(function (tweets) {
-      renderTweets(tweets);
+      renderTweets(tweets)
     })
   }
-  loadTweets()
+  loadTweets();
 
+  // add new tweet to tweets page
   var $submitTweet = $('.submitTweet');
   $submitTweet.submit(function (event) {
-      event.preventDefault();
-      let $tweetContent = $(this);
-      let submitable = checkTweet();
-
-      if (submitable) {
-        $.ajax('/tweets', {
-          method: 'POST',
-          data: $tweetContent.serialize()
-        })
-        .done(function() {
-          loadTweets();
-          $('.textArea').val("");
-          $('.counter').text("140");
-        })
-      }
+    event.preventDefault();
+    let $tweetContent = $(this);
+    let submitable = checkTweet();
+    // if all check is passed then POST new tweet
+    if (submitable) {
+      $.ajax('/tweets', {
+        method: 'POST',
+        data: $tweetContent.serialize()
+      })
+      // once new tweet is posted in tweets page, clear textarea and reset counter to 140
+      .done(function() {
+        loadTweets();
+        $('.textArea').val("");
+        $('.counter').text("140");
+      });
+    }
   });
-
+  // check conditions (1)empty textbox (2) char > 140. If both pass then return true
   const checkTweet = function () {
     let checkTextarea = $('.textArea').val();
     if (checkTextarea === "" || checkTextarea === null) {
@@ -81,15 +84,16 @@ $(document).ready(function() {
     }
   }
 
-
+  //slide toggle Compose Tweet Box when Compose button is clicked
   $( '.new-tweet' ).hide();
   $( '.large-button' ).click(function() {
     $( '.new-tweet' ).slideToggle('fast');
   });
 
-$('.large-button').on('click', function() {
-  $('.textArea').focus()
-})
+  // make text area focussed when Compose button is clicked
+  $('.large-button').on('click', function() {
+    $('.textArea').focus();
+  });
 
 });
 
