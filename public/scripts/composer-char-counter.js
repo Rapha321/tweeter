@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('.new-tweet textArea').keyup(function(event) {
+  $('.new-tweet .textArea').keyup(function(event) {
     $('.errorBlank').css('display', 'none');
 
     var value = $(this).val().length;

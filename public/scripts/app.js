@@ -103,8 +103,8 @@ function escape(str) {
 
 
 function renderTweets(tweets) {
-  for (let id of tweets) {
-    $("#unique").prepend(createTweetElement(id));
+  for (let idiv of tweets) {
+    $("#unique").prepend(createTweetElement(idiv));
   }
 }
 
@@ -184,15 +184,15 @@ $(document).ready(function() {
       return false;
     } else {
       return true;
-
     }
   }
 
-  // $( '.new-tweet' ).hide();
+  $( '.new-tweet' ).hide();
   $( '.large-button' ).click(function() {
     $( '.new-tweet' ).slideToggle('fast');
   });
 
+  // $('.textArea').document.text.focus();
 
 
 });
