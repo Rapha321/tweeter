@@ -27,7 +27,7 @@ body {
 
 .container {
     width: 450px;
-    height: 1500px;
+    height: auto;
     text-align: center;
     background-color: white;
     padding-top: 140px;

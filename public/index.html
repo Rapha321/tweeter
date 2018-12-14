@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300i,700i" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-<!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -18,6 +16,7 @@
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
@@ -39,14 +38,14 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form class="submitTweet" name="submitTweet" action="/tweets/" method="POST">
-          <textarea class="textArea" name="text" placeholder="What are you humming about?"></textarea>
+          <textarea autofocus="autofocus" class="textArea" name="text" placeholder="What are you humming about?"></textarea>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
         <body OnLoad="document.submitTweet.text.focus();">
         <div class="errorMessages">
-          <p class="errorBlank"> <i class="fa fa-times"></i> Error: Tweet cannot be blank!</p>
-          <p class="error140"> <i class="fa fa-times"></i> Error: Length of tweet cannot be greater than 140 characters!!</p>
+          <p class="errorBlank"> <i class="fa fa-times"></i> Tweet cannot be blank!</p>
+          <p class="error140"> <i class="fa fa-times"></i> Tweet cannot be greater than 140 characters!!</p>
         </div>
       </section>
 
